@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/icon.png" width="100" alt="Package Logo"/>
+  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/icon.png" width="100" alt="Package Logo"/>
 </div>
 
 # Responsive Addons
@@ -17,7 +17,7 @@ A powerful Flutter package offering **responsive UI utilities** and a **Bootstra
 It focuses solely on responsive utilities and layout tools—making it lightweight, modular, and easy to integrate into any Flutter project.
 
 <p align="center">
-  <img src="images/screenshot.png" width="600" alt="Responsive Grid Example"/>
+  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/screenshot.png" width="600" alt="Responsive Grid Example"/>
 </p>
 
 ---
