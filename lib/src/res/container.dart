@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+part of 'package:responsive_addons/responsive_addons.dart';
 
 class Kontainer extends StatelessWidget {
   final Widget child;

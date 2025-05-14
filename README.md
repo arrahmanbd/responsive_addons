@@ -1,7 +1,24 @@
+<div align="center">
+  <img src="images/icon.png" width="100" alt="Package Logo"/>
+</div>
 
 # Responsive Addons
 
+
 A powerful Flutter package offering **responsive UI utilities** and a **Bootstrap-style grid system** for building adaptable layouts across all screen sizes and devices.
+
+> **`responsive_addons`** is a standalone module extracted from the [`flutter_addons`](https://github.com/arrahmanbd/flutter_addons) framework.  
+> It focuses solely on responsive layout and scaling utilities—making it lightweight, modular, and easy to integrate into any Flutter project.  
+> 📦 [View on pub.dev »](https://pub.dev/packages/flutter_addons)
+
+
+[![pub package](https://img.shields.io/pub/v/flutter_addons.svg)](https://pub.dev/packages/flutter_addons)
+
+It focuses solely on responsive utilities and layout tools—making it lightweight, modular, and easy to integrate into any Flutter project.
+
+<p align="center">
+  <img src="images/screenshot.png" width="600" alt="Responsive Grid Example"/>
+</p>
 
 ---
 

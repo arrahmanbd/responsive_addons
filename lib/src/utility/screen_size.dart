@@ -1,3 +1,6 @@
+part of 'package:responsive_addons/responsive_addons.dart';
+
+
 enum ScreenSize { xs, sm, md, lg, xl }
 
 ScreenSize getScreenSize(double width) {

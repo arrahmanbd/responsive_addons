@@ -18,7 +18,7 @@ extension ResponsiveScale on num {
   SizedBox get horizontalSpace => SizedBox(width: w);
 
   /// Vertical spacing using SizedBox
-  SizedBox get verticalSpace => SizedBox(height: h);
+  SizedBox get vs => SizedBox(height: h);
 
   // square box
   SizedBox get squareBox => SizedBox(width: w, height: h);

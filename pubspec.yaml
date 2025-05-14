@@ -12,6 +12,8 @@ documentation: https://github.com/arrahmanbd/flutter_addons/wiki
 screenshots:
   - description: 'Responsive Addons Icon'
     path: images/icon.png
+  - description: 'Responsive Addons Screenshot'
+    path: images/screenshot.png
 topics:
   - responsive
   - figma

@@ -1,5 +1,4 @@
-import 'package:flutter/widgets.dart';
-import 'package:responsive_addons/src/utility/screen_size.dart';
+part of 'package:responsive_addons/responsive_addons.dart';
 
 class Col extends StatelessWidget {
   final Widget child;
