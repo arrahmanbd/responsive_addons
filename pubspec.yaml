@@ -1,0 +1,42 @@
+name: responsive_addons
+description: >
+  A powerful Flutter package that provides responsive UI utilities 
+  and a Bootstrap-style grid system for building adaptable layouts 
+  across all screen sizes and devices.
+
+version: 1.0.0
+homepage: https://github.com/arrahmanbd/responsive_addons
+repository: https://github.com/arrahmanbd/responsive_addons
+issue_tracker: https://github.com/arrahmanbd/responsive_addons/issues
+documentation: https://github.com/arrahmanbd/flutter_addons/wiki
+screenshots:
+  - description: 'Responsive Addons Icon'
+    path: images/icon.png
+topics:
+  - responsive
+  - figma
+  - extensions
+  - adaptive
+  - spacing
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: false
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  windows:
+  web:
