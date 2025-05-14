@@ -145,7 +145,7 @@ flutter pub get
 
 ## 📚 Documentation
 
-Full documentation available on [GitHub](https://github.com/your_username/responsive_addons#readme) (replace with actual link).
+Full documentation available on [GitHub](https://github.com/arrahmanbd/responsive_addons#readme) 
 
 ---
 
