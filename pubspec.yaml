@@ -4,7 +4,7 @@ description: >
   and a Bootstrap-style grid system for building adaptable layouts 
   across all screen sizes and devices.
 
-version: 1.1.0-dev
+version: 1.1.0
 homepage: https://github.com/arrahmanbd/responsive_addons
 repository: https://github.com/arrahmanbd/responsive_addons
 issue_tracker: https://github.com/arrahmanbd/responsive_addons/issues

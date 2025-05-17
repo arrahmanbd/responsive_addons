@@ -1,4 +1,4 @@
-# 1.1.0-dev
+# 1.1.0
 ### ✨ What's New
 
 - Added **Dflex** for dynamic layout like bootstrap.
