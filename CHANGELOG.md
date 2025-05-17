@@ -1,6 +1,16 @@
+# 1.1.0-dev
+### ✨ What's New
+
+- Added **Dflex** for dynamic layout like bootstrap.
+- Added some layout for dynamic view handeling.
+ ### 🛠 Improvements
+
+- Unified visual layout for all screen types
+- Prepared structure for future screen variants (e.g., Tablet, Landscape)
+- Included documentation and desktop screenshot
 # 1.0.0
 
-## 🎉 Initial Release
+### 🎉 Initial Release
 
 - Introduced `ResponsiveApp` entry point for app-wide scaling.
 - Added responsive unit extensions: `.ph`, `.pw`, `.sp`, `.dp`, `.cm`, `.inches`, etc.

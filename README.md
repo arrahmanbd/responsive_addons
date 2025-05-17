@@ -16,30 +16,29 @@ A powerful Flutter package offering **responsive UI utilities** and a **Bootstra
 
 It focuses solely on responsive utilities and layout tools—making it lightweight, modular, and easy to integrate into any Flutter project.
 
-## 🖥️ Desktop View
+## 🖥️ Demo
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/screenshot.png" width="600" alt="Responsive Grid - Desktop View"/>
-</p>
+<table align="center">
+  <tr>
+    <td align="center" colspan="2">
+      <strong>🖥️ Desktop View</strong><br/>
+      <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/screenshot.png" width="600" alt="Responsive Grid - Desktop View"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>📱 Mobile View</strong><br/>
+      <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/mobile_screen.png" width="300" alt="Responsive Grid - Mobile View"/>
+    </td>
+    <td align="center">
+      <strong>⚠️ Error Screen</strong><br/>
+      <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/error_screen.png" width="300" alt="Responsive Grid - Error View"/>
+    </td>
+  </tr>
+</table>
 
----
-
-## 📱 Mobile View 
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/mobile_screen.png" width="300" alt="Responsive Grid - Mobile View "/>
-</p>
-
----
-
-## 📱 Custom Error Screen
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/error_screen.png" width="300" alt="Responsive Grid - Error"/>
-</p>
 
 
----
 
 ## ✨ Key Features
 
@@ -70,6 +69,13 @@ ResponsiveApp(
 ````
 
 ---
+- If you do not provide a design size, responsive sizing based on fixed design pixels will not work correctly.
+
+- In such cases, use percentage-based sizing units like .pw (percentage width) and .ph (percentage height) to ensure layouts scale properly on different devices.
+
+- Using percentage units ensures your UI adapts fluidly without relying on fixed pixel values from a specific design resolution.
+
+
 
 ## 📐 Responsive Units
 

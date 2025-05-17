@@ -77,7 +77,7 @@ class StoreHomePage extends StatelessWidget {
               ),
             ),
           ),
-        Expanded(child: ExampleTrap())
+          Expanded(child: ExampleTrap()),
         ],
       ),
     );

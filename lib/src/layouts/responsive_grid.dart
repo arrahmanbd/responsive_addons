@@ -9,7 +9,9 @@ class ResponsiveGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        int crossAxisCount = constraints.maxWidth > 600 ? 3 : 1; // Grid adjusts based on screen size
+        int crossAxisCount = constraints.maxWidth > 600
+            ? 3
+            : 1; // Grid adjusts based on screen size
         return GridView.count(
           crossAxisCount: crossAxisCount,
           crossAxisSpacing: 16,

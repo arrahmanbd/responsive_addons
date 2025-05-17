@@ -1,6 +1,5 @@
 part of 'package:responsive_addons/responsive_addons.dart';
 
-
 /// Extension on `BuildContext` for screen size and platform breakpoints.
 extension ResponsiveExtension on BuildContext {
   double get screenWidth => MediaQuery.of(this).size.width;
@@ -92,10 +91,10 @@ class Adaptive {
   }
 
   AdaptiveGridConfig get grid => AdaptiveGridConfig(
-    crossAxisCount: columnCount,
-    childAspectRatio: productCardRatio,
-    spacing: spacing,
-  );
+        crossAxisCount: columnCount,
+        childAspectRatio: productCardRatio,
+        spacing: spacing,
+      );
 }
 
 /// Grid configuration data holder

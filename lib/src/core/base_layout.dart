@@ -12,12 +12,11 @@ part of 'package:responsive_addons/responsive_addons.dart';
 // 16.px width ➝ (16 / 360) * 100 = 4.44.w
 // 16.px height ➝ (16 / 800) * 100 = 2.00.h
 // 16.px font ➝ (16 / 360) * 100 = 4.44.sp (use width-based scaling for font)
-typedef ResponsiveBuilderType =
-    Widget Function(
-      BuildContext context,
-      Orientation orientation,
-      ScreenType screenType,
-    );
+typedef ResponsiveBuilderType = Widget Function(
+  BuildContext context,
+  Orientation orientation,
+  ScreenType screenType,
+);
 
 class BaseResponsiveWidget extends StatelessWidget {
   const BaseResponsiveWidget({

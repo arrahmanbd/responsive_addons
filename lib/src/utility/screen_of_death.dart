@@ -284,8 +284,8 @@ class _AssistantErrorScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       OutlinedButton.icon(
-                        onPressed:
-                            () => _RDebugger.log(details.exception.toString()),
+                        onPressed: () =>
+                            _RDebugger.log(details.exception.toString()),
                         icon: const Icon(Icons.bug_report, size: 18),
                         label: const Text("Debug Info"),
                         style: OutlinedButton.styleFrom(
@@ -665,7 +665,6 @@ class _CatHackerErrorScreen extends StatelessWidget {
               ), // You can adjust height based on your needs
               painter: HackerCatPainter(),
             ),
-
             const SizedBox(height: 20),
             const Text(
               "MEOWTRIX BREACHED",
@@ -849,10 +848,9 @@ class _Desert404ErrorScreen extends StatelessWidget {
 class DesertCactusPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final Paint paint =
-        Paint()
-          ..color = Colors.green
-          ..style = PaintingStyle.fill;
+    final Paint paint = Paint()
+      ..color = Colors.green
+      ..style = PaintingStyle.fill;
 
     // Draw the main trunk of the cactus (vertical rectangle)
     final trunkRect = Rect.fromLTWH(
@@ -928,13 +926,12 @@ class DesertCactusPainter extends CustomPainter {
 class CurtainPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final curtainPaint =
-        Paint()
-          ..shader = LinearGradient(
-            colors: [Colors.red.shade900, Colors.red.shade700],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
+    final curtainPaint = Paint()
+      ..shader = LinearGradient(
+        colors: [Colors.red.shade900, Colors.red.shade700],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
 
     final path = Path();
 
@@ -958,11 +955,10 @@ class CurtainPainter extends CustomPainter {
     canvas.drawPath(path, curtainPaint);
 
     // Draw folds
-    final foldPaint =
-        Paint()
-          ..color = Colors.red.shade800.withValues(alpha: 0.3)
-          ..strokeWidth = 4
-          ..style = PaintingStyle.stroke;
+    final foldPaint = Paint()
+      ..color = Colors.red.shade800.withValues(alpha: 0.3)
+      ..strokeWidth = 4
+      ..style = PaintingStyle.stroke;
 
     for (double x = 0; x < size.width; x += size.width / 10) {
       final path = Path();
@@ -994,28 +990,25 @@ class HackerCatPainter extends CustomPainter {
 
     // Cat ears (triangular)
     final earPaint = Paint()..color = Colors.grey.shade700;
-    final earPathLeft =
-        Path()
-          ..moveTo(size.width * 0.25, size.height * 0.1)
-          ..lineTo(size.width * 0.1, size.height * 0.3)
-          ..lineTo(size.width * 0.4, size.height * 0.3)
-          ..close();
+    final earPathLeft = Path()
+      ..moveTo(size.width * 0.25, size.height * 0.1)
+      ..lineTo(size.width * 0.1, size.height * 0.3)
+      ..lineTo(size.width * 0.4, size.height * 0.3)
+      ..close();
 
-    final earPathRight =
-        Path()
-          ..moveTo(size.width * 0.75, size.height * 0.1)
-          ..lineTo(size.width * 0.9, size.height * 0.3)
-          ..lineTo(size.width * 0.6, size.height * 0.3)
-          ..close();
+    final earPathRight = Path()
+      ..moveTo(size.width * 0.75, size.height * 0.1)
+      ..lineTo(size.width * 0.9, size.height * 0.3)
+      ..lineTo(size.width * 0.6, size.height * 0.3)
+      ..close();
 
     canvas.drawPath(earPathLeft, earPaint);
     canvas.drawPath(earPathRight, earPaint);
 
     // Cat eyes (glowing)
-    final eyePaint =
-        Paint()
-          ..color = Colors.greenAccent
-          ..maskFilter = MaskFilter.blur(BlurStyle.normal, 10.0); // Glow effect
+    final eyePaint = Paint()
+      ..color = Colors.greenAccent
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 10.0); // Glow effect
     canvas.drawCircle(
       Offset(size.width * 0.35, size.height * 0.45),
       size.height * 0.08,
@@ -1029,36 +1022,33 @@ class HackerCatPainter extends CustomPainter {
 
     // Cat nose (small triangle)
     final nosePaint = Paint()..color = Colors.pink.shade300;
-    final nosePath =
-        Path()
-          ..moveTo(size.width / 2, size.height * 0.55)
-          ..lineTo(size.width * 0.45, size.height * 0.6)
-          ..lineTo(size.width * 0.55, size.height * 0.6)
-          ..close();
+    final nosePath = Path()
+      ..moveTo(size.width / 2, size.height * 0.55)
+      ..lineTo(size.width * 0.45, size.height * 0.6)
+      ..lineTo(size.width * 0.55, size.height * 0.6)
+      ..close();
     canvas.drawPath(nosePath, nosePaint);
 
     // Cat mouth (curves)
-    final mouthPaint =
-        Paint()
-          ..color = Colors.pink.shade300
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 2;
+    final mouthPaint = Paint()
+      ..color = Colors.pink.shade300
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2;
 
-    final mouthPath =
-        Path()
-          ..moveTo(size.width * 0.45, size.height * 0.65)
-          ..quadraticBezierTo(
-            size.width * 0.4,
-            size.height * 0.7,
-            size.width / 2,
-            size.height * 0.7,
-          )
-          ..quadraticBezierTo(
-            size.width * 0.6,
-            size.height * 0.7,
-            size.width * 0.55,
-            size.height * 0.65,
-          );
+    final mouthPath = Path()
+      ..moveTo(size.width * 0.45, size.height * 0.65)
+      ..quadraticBezierTo(
+        size.width * 0.4,
+        size.height * 0.7,
+        size.width / 2,
+        size.height * 0.7,
+      )
+      ..quadraticBezierTo(
+        size.width * 0.6,
+        size.height * 0.7,
+        size.width * 0.55,
+        size.height * 0.65,
+      );
     canvas.drawPath(mouthPath, mouthPaint);
 
     // Cat whiskers
@@ -1103,24 +1093,23 @@ class HackerCatPainter extends CustomPainter {
 class EightBitSkullPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final Paint paint =
-        Paint()
-          ..color = Colors.white
-          ..style = PaintingStyle.fill;
+    final Paint paint = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.fill;
 
     // Skull outline (rectangle with rounded edges)
-    final skullPath =
-        Path()..addRRect(
-          RRect.fromRectAndRadius(
-            Rect.fromLTWH(
-              size.width * 0.25,
-              size.height * 0.2,
-              size.width * 0.5,
-              size.height * 0.6,
-            ),
-            Radius.circular(12),
+    final skullPath = Path()
+      ..addRRect(
+        RRect.fromRectAndRadius(
+          Rect.fromLTWH(
+            size.width * 0.25,
+            size.height * 0.2,
+            size.width * 0.5,
+            size.height * 0.6,
           ),
-        );
+          Radius.circular(12),
+        ),
+      );
     canvas.drawPath(skullPath, paint);
 
     // Eye sockets (black rectangles)
@@ -1149,12 +1138,11 @@ class EightBitSkullPainter extends CustomPainter {
     );
 
     // Nose (triangle)
-    final nosePath =
-        Path()
-          ..moveTo(size.width * 0.47, size.height * 0.55)
-          ..lineTo(size.width * 0.53, size.height * 0.55)
-          ..lineTo(size.width * 0.5, size.height * 0.65)
-          ..close();
+    final nosePath = Path()
+      ..moveTo(size.width * 0.47, size.height * 0.55)
+      ..lineTo(size.width * 0.53, size.height * 0.55)
+      ..lineTo(size.width * 0.5, size.height * 0.65)
+      ..close();
     canvas.drawPath(nosePath, eyePaint);
 
     // Mouth (5 horizontal lines to simulate an 8-bit smile)
@@ -1174,18 +1162,18 @@ class EightBitSkullPainter extends CustomPainter {
 
     // Skull shadow effect (darker shade)
     final shadowPaint = Paint()..color = Colors.black.withValues(alpha: 0.2);
-    final shadowPath =
-        Path()..addRRect(
-          RRect.fromRectAndRadius(
-            Rect.fromLTWH(
-              size.width * 0.27,
-              size.height * 0.4,
-              size.width * 0.46,
-              size.height * 0.55,
-            ),
-            Radius.circular(8),
+    final shadowPath = Path()
+      ..addRRect(
+        RRect.fromRectAndRadius(
+          Rect.fromLTWH(
+            size.width * 0.27,
+            size.height * 0.4,
+            size.width * 0.46,
+            size.height * 0.55,
           ),
-        );
+          Radius.circular(8),
+        ),
+      );
     canvas.drawPath(shadowPath, shadowPaint);
   }
 
@@ -1234,11 +1222,11 @@ class _RDebugger {
   static void info(Object? message) => log(message, level: _RLogLevels.info);
 
   /// Log warning message
-  static void warning(Object? message) => log(message, level: _RLogLevels.warning);
+  static void warning(Object? message) =>
+      log(message, level: _RLogLevels.warning);
 
   /// Log error message
   static void error(Object? message) => log(message, level: _RLogLevels.error);
-
 
   /// Convert MaterialColor to ANSI color code
   static int _ansiColor(Color color) {

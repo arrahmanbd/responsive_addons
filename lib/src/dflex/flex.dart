@@ -42,11 +42,11 @@ class Dflex extends StatelessWidget {
     return contentPadding
         ? EdgeInsets.symmetric(horizontal: space / 2)
         : EdgeInsets.fromLTRB(
-          index == 0 ? 0 : space / 2,
-          0,
-          index == length - 1 ? 0 : space / 2,
-          0,
-        );
+            index == 0 ? 0 : space / 2,
+            0,
+            index == length - 1 ? 0 : space / 2,
+            0,
+          );
   }
 
   @override

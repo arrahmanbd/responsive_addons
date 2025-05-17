@@ -48,8 +48,7 @@ class ResponsiveApp extends StatelessWidget {
     BuildContext context,
     Orientation orientation,
     ScreenType screenType,
-  )
-  builder;
+  ) builder;
   final FlutterExceptionHandler? onFlutterError;
   final Widget Function(FlutterErrorDetails error)? errorScreen;
 

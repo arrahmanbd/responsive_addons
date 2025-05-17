@@ -13,8 +13,10 @@ class CustomSidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = [
-      _SidebarItem(icon: Icons.dashboard, label: 'Dashboard', route: '/dashboard'),
-      _SidebarItem(icon: Icons.shopping_cart, label: 'Products', route: '/products'),
+      _SidebarItem(
+          icon: Icons.dashboard, label: 'Dashboard', route: '/dashboard'),
+      _SidebarItem(
+          icon: Icons.shopping_cart, label: 'Products', route: '/products'),
       _SidebarItem(icon: Icons.settings, label: 'Settings', route: '/settings'),
       _SidebarItem(icon: Icons.logout, label: 'Logout', route: '/logout'),
     ];
@@ -26,7 +28,8 @@ class CustomSidebar extends StatelessWidget {
       child: Column(
         children: [
           const DrawerHeader(
-            child: Text('Admin Panel', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            child: Text('Admin Panel',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           ),
           ...items.map(
             (item) => _SidebarTile(
@@ -91,7 +94,8 @@ class _SidebarTileState extends State<_SidebarTile> {
           color: backgroundColor,
           child: Row(
             children: [
-              Icon(widget.item.icon, color: isSelected ? Colors.blue : Colors.black54),
+              Icon(widget.item.icon,
+                  color: isSelected ? Colors.blue : Colors.black54),
               const SizedBox(width: 16),
               Text(
                 widget.item.label,
