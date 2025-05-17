@@ -16,9 +16,28 @@ A powerful Flutter package offering **responsive UI utilities** and a **Bootstra
 
 It focuses solely on responsive utilities and layout tools—making it lightweight, modular, and easy to integrate into any Flutter project.
 
+## 🖥️ Desktop View
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/screenshot.png" width="600" alt="Responsive Grid Example"/>
+  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/screenshot.png" width="600" alt="Responsive Grid - Desktop View"/>
 </p>
+
+---
+
+## 📱 Mobile View 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/mobile_screen.png" width="300" alt="Responsive Grid - Mobile View "/>
+</p>
+
+---
+
+## 📱 Custom Error Screen
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/arrahmanbd/responsive_addons/master/images/error_screen.png" width="300" alt="Responsive Grid - Error"/>
+</p>
+
 
 ---
 

@@ -79,7 +79,7 @@ class BaseResponsiveWidget extends StatelessWidget {
             final size = designSize;
             if (size == null) {
               debugPrint(
-                '[Warning] Design width not initialized. Using percentange (.pw) fallback.',
+                '[Warning] Design width not initialized. Using percentange (.pw, .ph) fallback.',
               );
             }
             if (size != null && size.width > 0 && size.height > 0) {

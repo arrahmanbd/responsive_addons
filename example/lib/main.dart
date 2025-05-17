@@ -27,33 +27,42 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class StoreHomePage extends StatelessWidget {
   const StoreHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-  
-      appBar: AppBar(
-       
-        centerTitle: true,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            // Handle menu button press
-          },
+      appBar: ResponsiveAppBar(
+        logo: const Text(
+          'Flutter Addons',
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
         ),
-        title: Text("Responsive Addons"),
-        actions: [
-         
-          2.s,
+        navItems: [
+          NavItem(label: "Home", onTap: () => print("Home")),
+          NavItem(label: "Shop", onTap: () => print("Shop")),
+          NavItem(label: "About", onTap: () => print("About")),
         ],
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.notifications, color: Colors.white),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.account_circle, color: Colors.white),
+            onPressed: () {},
+          ),
+        ],
+        backgroundColor: Colors.blueAccent,
       ),
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(child: _buildHeaderCard(context)),
-          
+
           SliverPadding(
             padding: 16.p,
             sliver: SliverGrid(
@@ -68,6 +77,7 @@ class StoreHomePage extends StatelessWidget {
               ),
             ),
           ),
+        Expanded(child: ExampleTrap())
         ],
       ),
     );
@@ -77,7 +87,6 @@ class StoreHomePage extends StatelessWidget {
     return Container(
       padding: 4.p,
       decoration: BoxDecoration(
-       
         borderRadius: BorderRadius.circular(2.r),
         boxShadow: [
           BoxShadow(
@@ -94,12 +103,13 @@ class StoreHomePage extends StatelessWidget {
             height: 200.h,
             width: double.infinity,
             decoration: BoxDecoration(
+              color: Colors.grey[300],
               borderRadius: BorderRadius.circular(2.pw),
-              
             ),
+            child: Center(child: Icon(Icons.image_outlined)),
           ),
           SizedBox(height: 20.h),
-          Text("Product Name", ),
+          Text("Product Name"),
           SizedBox(height: 5.h),
           Text(
             "\$49.99",
@@ -110,10 +120,7 @@ class StoreHomePage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10.h),
-          Text(
-            "Short description of the product goes here.",
-           
-          ),
+          Text("Short description of the product goes here."),
         ],
       ),
     );
@@ -124,7 +131,7 @@ class StoreHomePage extends StatelessWidget {
       height: 350.h, // 20% height of screen
       padding: EdgeInsets.all(4.pw),
       decoration: BoxDecoration(
-       // borderRadius: BorderRadius.circular(2.r),
+        // borderRadius: BorderRadius.circular(2.r),
         gradient: LinearGradient(
           colors: [
             const Color.fromARGB(255, 204, 221, 253),
@@ -138,11 +145,8 @@ class StoreHomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Welcome to Flutter Addons!",
-            style: TextStyle(
-              fontSize: 18.sp,
-              fontWeight: FontWeight.bold,
-            ),
+            "Welcome to Responsive Addons!",
+            style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 5.h),
           Text("Explore top deals and new arrivals."),
@@ -153,6 +157,33 @@ class StoreHomePage extends StatelessWidget {
               4.s,
               OutlinedButton(onPressed: () {}, child: Text('Signup')),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+///bootstrap
+class ExampleTrap extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Kontainer(
+      child: ResponsiveRow(
+        children: [
+          Col(md: 4, offsetMd: 2, child: Text('Column with Offset')),
+          HiddenOn(
+            sizes: [ScreenSize.xs],
+            child: Col(md: 6, child: Text('Hidden on XS')),
+          ),
+          Col(
+            md: 12,
+            child: ResponsiveRow(
+              children: [
+                Col(xs: 6, child: Text('Nested Col 1')),
+                Col(xs: 6, child: Text('Nested Col 2')),
+              ],
+            ),
           ),
         ],
       ),
