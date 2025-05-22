@@ -10,23 +10,24 @@ part of 'package:responsive_addons/responsive_addons.dart';
 /// Based on design fixed values (using screen dimensions directly)
 extension IntMarginPaddingBasedOnDesign on int {
   // Margin
-  EdgeInsets get m => EdgeInsets.all(w); // margin all sides
-  EdgeInsets get mt => EdgeInsets.only(top: h); // margin top
-  EdgeInsets get mb => EdgeInsets.only(bottom: h); // margin bottom
-  EdgeInsets get ml => EdgeInsets.only(left: w); // margin left
-  EdgeInsets get mr => EdgeInsets.only(right: w); // margin right
-  EdgeInsets get mx => EdgeInsets.symmetric(horizontal: w); // margin horizontal
-  EdgeInsets get my => EdgeInsets.symmetric(vertical: h); // margin vertical
+  EdgeInsets get m => EdgeInsets.all(dw); // margin all sides
+  EdgeInsets get mt => EdgeInsets.only(top: dh); // margin top
+  EdgeInsets get mb => EdgeInsets.only(bottom: dh); // margin bottom
+  EdgeInsets get ml => EdgeInsets.only(left: dw); // margin left
+  EdgeInsets get mr => EdgeInsets.only(right: dw); // margin right
+  EdgeInsets get mx =>
+      EdgeInsets.symmetric(horizontal: dw); // margin horizontal
+  EdgeInsets get my => EdgeInsets.symmetric(vertical: dh); // margin vertical
 
   // Padding
-  EdgeInsets get p => EdgeInsets.all(w); // padding all sides
-  EdgeInsets get pt => EdgeInsets.only(top: h); // padding top
-  EdgeInsets get pb => EdgeInsets.only(bottom: h); // padding bottom
-  EdgeInsets get pl => EdgeInsets.only(left: w); // padding left
-  EdgeInsets get pr => EdgeInsets.only(right: w); // padding right
+  EdgeInsets get p => EdgeInsets.all(dw); // padding all sides
+  EdgeInsets get pt => EdgeInsets.only(top: dh); // padding top
+  EdgeInsets get pb => EdgeInsets.only(bottom: dh); // padding bottom
+  EdgeInsets get pl => EdgeInsets.only(left: dw); // padding left
+  EdgeInsets get pr => EdgeInsets.only(right: dw); // padding right
   EdgeInsets get px =>
-      EdgeInsets.symmetric(horizontal: w); // padding horizontal
-  EdgeInsets get py => EdgeInsets.symmetric(vertical: h); // padding vertical
+      EdgeInsets.symmetric(horizontal: dw); // padding horizontal
+  EdgeInsets get py => EdgeInsets.symmetric(vertical: dh); // padding vertical
 
   // Square Box
   SizedBox get s => SizedBox(height: ph, width: pw);

@@ -34,10 +34,10 @@ class StoreHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ResponsiveAppBar(
-        logo: const Text(
+        logo: Text(
           'Flutter Addons',
           style: TextStyle(
-            fontSize: 22,
+            fontSize: 22.dt,
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
@@ -77,7 +77,8 @@ class StoreHomePage extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(child: ExampleTrap()),
+          // Replacing Expanded with SliverFillRemaining
+          SliverFillRemaining(hasScrollBody: false, child: ExampleTrap()),
         ],
       ),
     );
@@ -100,7 +101,7 @@ class StoreHomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 200.h,
+            height: 200.dh,
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.grey[300],
@@ -108,9 +109,9 @@ class StoreHomePage extends StatelessWidget {
             ),
             child: Center(child: Icon(Icons.image_outlined)),
           ),
-          SizedBox(height: 20.h),
+          SizedBox(height: 20.dh),
           Text("Product Name"),
-          SizedBox(height: 5.h),
+          SizedBox(height: 5.dh),
           Text(
             "\$49.99",
             style: TextStyle(
@@ -119,7 +120,7 @@ class StoreHomePage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 10.dh),
           Text("Short description of the product goes here."),
         ],
       ),
@@ -128,7 +129,7 @@ class StoreHomePage extends StatelessWidget {
 
   Container _buildHeaderCard(BuildContext context) {
     return Container(
-      height: 350.h, // 20% height of screen
+      height: 350.dh, // 20% height of screen
       padding: EdgeInsets.all(4.pw),
       decoration: BoxDecoration(
         // borderRadius: BorderRadius.circular(2.r),
@@ -148,7 +149,7 @@ class StoreHomePage extends StatelessWidget {
             "Welcome to Responsive Addons!",
             style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 5.h),
+          SizedBox(height: 5.dh),
           Text("Explore top deals and new arrivals."),
           Spacer(),
           Row(
@@ -166,6 +167,8 @@ class StoreHomePage extends StatelessWidget {
 
 ///bootstrap
 class ExampleTrap extends StatelessWidget {
+  const ExampleTrap({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Kontainer(

@@ -1,10 +1,5 @@
 part of 'package:responsive_addons/responsive_addons.dart';
 
-enum Mode { percent, absolute, design }
-
-class AdaptiveConfig {
-  static Mode mode = Mode.percent;
-}
 
 /// Extension for converting units and handling responsive sizing based on device dimensions.
 extension ResponsiveSpacing on num {
@@ -30,41 +25,73 @@ extension ResponsiveSpacing on num {
   double get px => toDouble();
 
   /// Converts the value to a percentage of the device's screen height.
-  double get ph => this * DeviceUtilityPack.height / 100;
+  double get ph {
+    final screenHeight = DeviceUtilityPack.height;
+    return this * screenHeight / 100;
+  }
 
   /// Converts the value to a percentage of the device's screen width.
-  /// To convert Px like  16.px width ➝ (16 / 360) * 100 = 4.44.w
-  double get pw => this * DeviceUtilityPack.width / 100;
+  double get pw {
+    final screenWidth = DeviceUtilityPack.width;
+    return this * screenWidth / 100;
+  }
 
   /// Converts the value to a percentage of the available height after `SafeArea`.
-  double get sh => this * DeviceUtilityPack.safeHeight / 100;
+  double get sh {
+    final safeHeight = DeviceUtilityPack.safeHeight;
+    return this * safeHeight / 100;
+  }
 
   /// Converts the value to a percentage of the available width after `SafeArea`.
-  double get sw => this * DeviceUtilityPack.safeWidth / 100;
+  double get sw {
+    final safeWidth = DeviceUtilityPack.safeWidth;
+    return this * safeWidth / 100;
+  }
 
   /// Converts the value to scalable pixels (sp), adjusting for pixel density and aspect ratio.
-  double get sp =>
-      this *
-      (((ph + pw) +
-              (DeviceUtilityPack.pixelRatio * DeviceUtilityPack.aspectRatio)) /
-          2.08) /
-      100;
+  double get sp {
+    final screenHeight = DeviceUtilityPack.height;
+    final screenWidth = DeviceUtilityPack.width;
+    final pixelRatio = DeviceUtilityPack.pixelRatio;
+    final aspectRatio = DeviceUtilityPack.aspectRatio;
+
+    return this * (((screenHeight + screenWidth) + (pixelRatio * aspectRatio)) / 2.08) / 100;
+  }
 
   /// Converts the value to scalable pixels (spa) with an alternate formula.
-  double get spa =>
-      this * (((ph + pw) + (240 * DeviceUtilityPack.aspectRatio)) / 2.08) / 100;
+  double get spa {
+    final screenHeight = DeviceUtilityPack.height;
+    final screenWidth = DeviceUtilityPack.width;
+    final aspectRatio = DeviceUtilityPack.aspectRatio;
+
+    return this * (((screenHeight + screenWidth) + (240 * aspectRatio)) / 2.08) / 100;
+  }
 
   /// Converts the value to density-independent pixels (dp) for consistent sizing across devices.
-  double get dp => this * (pw * 160) / DeviceUtilityPack.pixelRatio;
+  double get dp {
+    final screenWidth = DeviceUtilityPack.width;
+    final pixelRatio = DeviceUtilityPack.pixelRatio;
+
+    return this * (screenWidth * 160) / pixelRatio;
+  }
 
   /// Converts the value to a percentage of the viewport's smaller dimension (height/width).
-  double get vmin =>
-      this * min(DeviceUtilityPack.height, DeviceUtilityPack.width) / 100;
+  double get vmin {
+    final screenHeight = DeviceUtilityPack.height;
+    final screenWidth = DeviceUtilityPack.width;
+    return this * min(screenHeight, screenWidth) / 100;
+  }
 
   /// Converts the value to a percentage of the viewport's larger dimension (height/width).
-  double get vmax =>
-      this * max(DeviceUtilityPack.height, DeviceUtilityPack.width) / 100;
+  double get vmax {
+    final screenHeight = DeviceUtilityPack.height;
+    final screenWidth = DeviceUtilityPack.width;
+    return this * max(screenHeight, screenWidth) / 100;
+  }
 
   /// Converts the value to a responsive radius (r), based on screen width.
-  double get r => this * DeviceUtilityPack.width / 100;
+  double get r {
+    final screenWidth = DeviceUtilityPack.width;
+    return this * screenWidth / 100;
+  }
 }
